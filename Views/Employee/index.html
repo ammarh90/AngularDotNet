@@ -1,0 +1,37 @@
+﻿@{
+ViewBag.Title = "Welcome";
+}
+
+<style>
+    table, tr, td, th {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+<body data-ng-app="APIModule">
+    <div id="tblSubs" ng-controller="APIController">
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Active</th>
+                <th>Department</th>
+            </tr>
+            <tbody data-ng-repeat="empl in employee">
+                <tr>
+                    <td>{{empl.Id}}</td>
+                    <td>{{empl.Name}}</td>
+                    <td>{{empl.Surname}}</td>
+                    <td>{{empl.Age}}</td>
+                    <td>{{empl.Active}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="~/Scripts/APIScripts/Module.js"></script>
+<script src="~/Scripts/APIScripts/Service.js"></script>
+<script src="~/Scripts/APIScripts/Controller.js"></script>  
